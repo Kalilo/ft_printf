@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 08:04:10 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/24 15:43:23 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main()
     int     k = 123;
     char    *str = "Hello World";
 
-    printf("Origonal%%: %i, %s\n", k, str);
-    ft_printf("Mine%%: %i, %s\n", k, str);
+    printf("printf%%: %i, %s\n", k, str);
+    ft_printf("ft_printf%%: %i, %s\n", k, str);
 
     return (0);
 }

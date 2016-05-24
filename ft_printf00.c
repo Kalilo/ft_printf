@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 09:50:26 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/24 15:46:32 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 //int printf(const char *format, ...);
 
-void    ft_add_param(char type, void *param)
+void 			   ft_add_param(char type, void *param)
 {
     if (type == 'S')
         ft_putstr_l((long char *)param);
@@ -24,7 +24,7 @@ void    ft_add_param(char type, void *param)
         ft_putstr((char *)param);
 }
 
-int ft_printf(const char *str, ...)
+int					ft_printf(const char *str, ...)
 {
     va_list         format;
     unsigned int    k;
