@@ -6,15 +6,14 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 15:46:32 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/24 16:42:15 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
-#include "libft.h"
-//int printf(const char *format, ...);
+#include "libft/libft.h"
 
-void 			   ft_add_param(char type, void *param)
+void 				ft_add_param(char type, void *param)
 {
     if (type == 'S')
         ft_putstr_l((long char *)param);
