@@ -6,11 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 16:42:19 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/25 09:18:30 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 #include <stdio.h>
 
 int ft_printf(char *str, ...);
