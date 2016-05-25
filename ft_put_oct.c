@@ -14,7 +14,7 @@
 
 void	ft_put_oct(const long unsigned int num)
 {
-	else if (n >= 8)
+	if (n >= 8)
 	{
 		ft_putnbr(n / 8);
 		ft_putchar(n % 8 + '0');
