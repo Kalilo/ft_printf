@@ -14,17 +14,17 @@
 
 void	ft_put_hex(const long unsigned int num)
 {
-	else if (n >= 16)
+	else if (num >= 16)
 	{
 		ft_putnbr(n / 16);
-		if (n % 16 < 10)
-			ft_putchar(n % 16 + '0');
+		if (num % 16 < 10)
+			ft_putchar(num % 16 + '0');
 		else
-			ft_putchar(n % 16 - 10 + 'A');
+			ft_putchar(num % 16 - 10 + 'A');
 	}
 	else
 		if (n % 16 < 10)
-			ft_putchar(n + '0');
+			ft_putchar(num + '0');
 		else
-			ft_putchar(n - 10 + 'A');
+			ft_putchar(num - 10 + 'A');
 }
