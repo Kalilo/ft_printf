@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 13:40:00 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/25 13:57:34 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # include "libft/libft.h"
 # include <stdarg.h>
+# include <stdlib.h>
 
 typedef struct		s_frmt
 {
