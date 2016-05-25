@@ -1,1 +1,1 @@
-update libft ft_putstr to use ptr arithmetic
+update libft ft_putstr to use ptr arithmetic -- DONE
