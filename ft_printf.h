@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 15:32:34 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/25 15:36:38 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct		s_frmt
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
 int					ft_chrpos(char c, char *str);
 int					ft_prschr(char **str, char c);
-char				ft_prschrs(char **str, char *str);
+char				ft_prschrs(char **str, char *chrs);
 int					ft_prsnbr(char **str, int *nbr);
 int					ft_prsstr(char **str, char *cmp);
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
