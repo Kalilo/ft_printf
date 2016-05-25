@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 13:57:34 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/25 14:32:26 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ typedef struct		s_frmt
 	int		modifier;
 }					t_frmt;
 
-unsigned long int	ft_strlen_l(const long char *str);
+unsigned long int	ft_strlen_l(const long int *str);
+void				ft_putstr_l(const long int *str);
 void				ft_put_hex(long unsigned int num);
 void				ft_put_oct(long unsigned int num);
+void				ft_put_uint(unsigned int num);
 
 #endif
