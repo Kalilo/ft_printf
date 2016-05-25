@@ -6,11 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 08:23:47 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 08:46:43 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 14:11:12 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long int   ft_strlen_l(const long char *str)
+unsigned long int   ft_strlen_l(const char *str)
 {
     unsigned long int   k;
 
