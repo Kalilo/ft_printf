@@ -6,11 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:14:16 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 10:22:04 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 10:40:50 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
 void	ft_put_hex(long unsigned int num)
 {

@@ -6,11 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 09:17:44 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 10:30:22 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 10:41:12 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
 void	ft_put_oct(long unsigned int num)
 {
