@@ -6,17 +6,17 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 15:08:37 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/25 15:11:21 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/25 15:46:14 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int		ft_chrpos(char c, char *str)
 {
 	int	n;
 
-	n = 0
+	n = 0;
 	while (str[n] != '\0')
 	{
 		if (str[n] == c)
