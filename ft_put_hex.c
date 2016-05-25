@@ -6,13 +6,13 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:14:16 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 10:16:15 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 10:22:04 by khansman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_put_hex(long unsigne int num)
+void	ft_put_hex(long unsigned int num)
 {
 	else if (n >= 16)
 	{
