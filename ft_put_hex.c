@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_put_hex(long unsigned int num)
+void	ft_put_hex(const long unsigned int num)
 {
 	else if (n >= 16)
 	{
