@@ -14,9 +14,9 @@
 
 void	ft_put_hex(const long unsigned int num)
 {
-	else if (num >= 16)
+	if (num >= 16)
 	{
-		ft_putnbr(n / 16);
+		ft_put_hex(n / 16);
 		if (num % 16 < 10)
 			ft_putchar(num % 16 + '0');
 		else
