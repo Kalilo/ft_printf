@@ -24,6 +24,8 @@ void 				ft_add_param(char type, void *param)
 		ft_put_oct((long unsigned int)param);
 	else if (type == 'x' || type == 'X')
 		ft_put_hex((long unsigned int)param);
+	else if (type == 'c')
+		ft_putchar((char)param);
 }
 
 int					ft_printf(const char *str, ...)
