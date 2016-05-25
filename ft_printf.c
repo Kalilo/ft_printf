@@ -6,12 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 09:54:00 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 10:33:50 by khansman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 void 				ft_add_param(char type, void *param)
 {
@@ -22,7 +21,9 @@ void 				ft_add_param(char type, void *param)
 	else if (type == 's')
 		ft_putstr((char *)param);
 	else if (type == 'o')
-		ft_put_oct((unsigned int)param);
+		ft_put_oct((long unsigned int)param);
+	else if (type == 'x' || type == 'X')
+		ft_put_hex((long unsigned int)param);
 }
 
 int					ft_printf(const char *str, ...)
