@@ -24,7 +24,7 @@ void	ft_put_hex(const long unsigned int num)
 	}
 	else
 		if (n % 16 < 10)
-			ft_putchar(n % 16 + '0');
+			ft_putchar(n + '0');
 		else
-			ft_putchar(n % 16 - 10 + 'A');
+			ft_putchar(n - 10 + 'A');
 }
