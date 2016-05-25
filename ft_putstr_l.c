@@ -6,11 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 08:48:24 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 08:53:12 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 09:18:09 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
 void    ft_putstr_l(char long const *s)
 {
@@ -19,7 +19,7 @@ void    ft_putstr_l(char long const *s)
     k = 0;
     while (s[k] != '\0')
     {
-        ft_putchar(str[k]);
+        ft_putchar(s[k]);
         k++;
     }
 }

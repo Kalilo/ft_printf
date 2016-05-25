@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/24 16:42:15 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/25 09:09:12 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void 				ft_add_param(char type, void *param)
 {
     if (type == 'S')
-        ft_putstr_l((long char *)param);
+        //ft_putstr_l((long char *)param);
     else if (type == 'i')
         ft_putnbr((int)param);
     else if (type == 's')
