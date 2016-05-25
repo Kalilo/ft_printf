@@ -6,13 +6,13 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 10:33:50 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/25 11:26:39 by khansman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void 				ft_add_param(char type, void *param)
+void				ft_add_param(char type, void *param)
 {
 	if (type == 'S')
 		//ft_putstr_l((long char *)param);
