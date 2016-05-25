@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_put_oct(long unsigned int num)
+void	ft_put_oct(const long unsigned int num)
 {
 	else if (n >= 8)
 	{
