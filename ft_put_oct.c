@@ -6,13 +6,13 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 09:17:44 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 10:41:12 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/25 13:04:56 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
-void	ft_put_oct(const long unsigned int num)
+void	ft_put_oct(const long unsigned int n)
 {
 	if (n >= 8)
 	{
