@@ -6,10 +6,11 @@
 #    By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/05/09 09:29:00 by ghavenga          #+#    #+#              #
-#    Updated: 2016/05/26 08:29:03 by ghavenga         ###   ########.fr        #
+#    Updated: 2016/05/26 09:08:27 by ghavenga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+MAIN = main.c #REMOVE THIS LATER
 NAME = ft_printf_test
 SRC = $(SRC1) $(SRC2) $(SRC3)
 SRC1 = ft_printf.c ft_printf.h ft_put_hex.c libft/libft.a libft/libft.h
@@ -26,7 +27,7 @@ CFLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME):
-		$(CC) $(CFLAGS) $(SRC)
+		$(CC) $(CFLAGS) $(SRC) $(MAIN)
 
 clean:
 		rm -f $(NAME)
