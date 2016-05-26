@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf00.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 08:28:38 by ghavenga         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
 void				ft_add_param(char type, void *param)
@@ -31,7 +19,7 @@ void				ft_add_param(char type, void *param)
 	else if (type == 'u')
 		ft_put_uint((long unsigned int)param);
 	else if (type == 'f')
-		ft_put_float((long double)param, 6);
+		ft_put_float((float)param, 6);
 }
 
 int					ft_printf(const char *str, ...)
