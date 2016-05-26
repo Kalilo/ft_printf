@@ -6,17 +6,22 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 08:48:24 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 09:46:03 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 15:14:54 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
-void	ft_putstr_l(const char *s)
+size_t	ft_putstr_l(const char *s)
 {
+	size_t	len;
+
+	len = 0;
     while (*s != '\0')
 	{
     	ft_putchar(*s);
 		s++;
+		len++;
 	}
+	return (len);
 }

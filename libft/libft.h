@@ -6,7 +6,7 @@
 /*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/11 07:24:56 by ghavenga          #+#    #+#             */
-/*   Updated: 2016/05/21 13:45:02 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/26 15:57:12 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
-void	ft_putchar(char c);
+size_t	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
-void	ft_putnbr(int n);
+size_t	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);

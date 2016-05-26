@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 13:49:09 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 15:48:48 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ int					ft_prsstr(char **str, char *cmp);
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
 char				*ft_parse_args PARAMS;
 unsigned long int	ft_strlen_l(const long int *str);
-void				ft_putstr_l(const char *s);
-void				ft_put_hex(long unsigned int num, int upper);
-void				ft_put_oct(long unsigned int num);
-void				ft_put_uint(unsigned int num);
+size_t				ft_putstr_l(const char *s);
+size_t				ft_put_hex(long unsigned int num, int upper);
+size_t				ft_put_oct(long unsigned int num);
+size_t				ft_put_uint(unsigned int num);
 void				ft_put_float(long double num, unsigned int dec);
 
 #endif

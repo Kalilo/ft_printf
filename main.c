@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 13:57:26 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 15:28:11 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,17 @@ int main(void)
 	ft_printf("\n::::::  UNIT  ::::::\n");
 	printf("printf   : %u <-> %D Both u & D unsigned int nums\n", u_a, u_b);
 	ft_printf("ft_printf: %u <-> %D Both u & D unsigned int nums\n", u_a, u_b);
+	printf("printf   : %u <-> %D Both u & D unsigned int nums (/w neg args)\n", 
+			-u_a, -u_b);
+	ft_printf("ft_printf: %u <-> %D Both u & D unsigned int nums (/w neg args)\n", 
+			-u_a, -u_b);
 
 	ft_printf("\n:::::  FLOAT  ::::::\n");
 	printf("printf   : %f Float num\n", 45.55);
-	ft_printf("ft_printf: %f Float num\n", 45.55);
+	//ft_printf("ft_printf: %f Float num\n", 45.55);
 
+	ft_printf("\n:::::  PTR   :::::\n");
+	int *a_ptr = &a;
+	printf("printf   : %p Pointer Mem Addr\n", a_ptr);
+	ft_printf("ft_printf: %p Pointer Mem Addr\n", a_ptr);
 }
