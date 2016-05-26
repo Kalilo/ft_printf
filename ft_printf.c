@@ -20,6 +20,8 @@ void				ft_add_param(char type, void *param)
 		ft_put_uint((long unsigned int)param);
 	else if (type == '%')
 		ft_putchar('%');
+	else if (type == p)
+		ft_put_hex((unsigned int)param, 0);
 //	else if (type == 'f')
 //		ft_put_float((float)param, 6);
 }
