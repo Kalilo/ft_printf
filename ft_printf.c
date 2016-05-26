@@ -27,7 +27,9 @@ void				ft_add_param(char type, void *param)
 	else if (type == 'c')
 		ft_putchar((char)param);
 	else if (type == 'u')
-		ft_put_uint((long unsigned int)param);
+		ft_put_unum((long unsigned int)param);
+	else if (type == 'f')
+		ft_put_float((long double)param, 6);
 }
 
 int					ft_printf(const char *str, ...)
