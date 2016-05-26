@@ -22,8 +22,10 @@ void				ft_add_param(char type, void *param)
 		ft_putstr((char *)param);
 	else if (type == 'o')
 		ft_put_oct((long unsigned int)param);
-	else if (type == 'x' || type == 'X')
-		ft_put_hex((long unsigned int)param);
+	else if (type == 'x')
+		ft_put_hex((long unsigned int)param, 0);
+	else if (type == 'X')
+		ft_put_hex((long unsigned int)param, 1);
 	else if (type == 'c')
 		ft_putchar((char)param);
 	else if (type == 'u')
