@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 13:52:33 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/26 08:04:42 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 09:26:25 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ char	*ft_parse_args(va_list *format, char *str, t_frmt *arg_frmt)
 	else if ((arg_frmt->modifier = ft_chrpos(*str, "hljz")) != -1)
 		(*str)++;
 	arg_frmt->type = *str;
-	if (str != '\0')
-		str++;
 	return (str);
 }
 
