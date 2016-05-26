@@ -46,7 +46,7 @@ int					ft_parse_wildchar(va_list *format, char **str, int *dst);
 char				*ft_parse_args PARAMS;
 unsigned long int	ft_strlen_l(const long int *str);
 void				ft_putstr_l(const long int *str);
-void				ft_put_hex(long unsigned int num);
+void				ft_put_hex(long unsigned int num, int upper);
 void				ft_put_oct(long unsigned int num);
 void				ft_put_uint(unsigned int num);
 void				ft_put_float(long double num, unsigned int dec);
