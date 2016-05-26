@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 16:51:56 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/26 08:24:55 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define MDF_J 2
 # define MDF_Z 3
 
-# define BLEG va_list *format, char *str, t_frmt *arg_frmt
+# define PARAMS (va_list *format, char *str, t_frmt *arg_frmt)
 
 typedef struct		s_frmt
 {
@@ -43,10 +43,10 @@ char				ft_prschrs(char **str, char *chrs);
 int					ft_prsnbr(char **str, int *nbr);
 int					ft_prsstr(char **str, char *cmp);
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
-char				*ft_parse_args(BLEG);
+char				*ft_parse_args PARAMS;
 unsigned long int	ft_strlen_l(const long int *str);
 void				ft_putstr_l(const long int *str);
-void				ft_put_hex(long unsigned int num);
+void				ft_put_hex(long unsigned int num, int upper);
 void				ft_put_oct(long unsigned int num);
 void				ft_put_uint(unsigned int num);
 void				ft_put_float(long double num, unsigned int dec);

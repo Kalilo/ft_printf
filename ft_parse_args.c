@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 13:52:33 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/25 15:52:55 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 08:04:42 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	ft_frmtset(t_frmt *arg_frmt, char flag)
 
 char	*ft_parse_args(va_list *format, char *str, t_frmt *arg_frmt)
 {
+	if (*str == '%')
+		str++;
 	ft_frmtset(arg_frmt, ft_prschrs(&str, "#0- +"));
 	ft_parse_wildchar(format, &str, &(arg_frmt->width));
 	if (arg_frmt->width < 0)
