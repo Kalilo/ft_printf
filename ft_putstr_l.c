@@ -16,5 +16,5 @@ void    ft_putstr_l(const long int *s)
 {
     *s--;
     while (*s++ != '\0')
-        ft_putchar(s[k]);
+        ft_putchar(*s);
 }
