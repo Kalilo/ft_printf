@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 09:41:09 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 09:53:49 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int ft_printf(char *str, ...);
 
 int main(void)
 {
+	int a = 42, b = 21;
 	char c = 'A';
 	char *text = "Hey Greg!";
 
@@ -37,6 +38,12 @@ int main(void)
 	ft_printf("ft_printf: %c %c %c just three chars\n", c, c, c);
 
 	ft_printf("\n:::::  STRINGS  ::::::\n");
-	printf("printf:  : %s How are you?\n", text);
+	printf("printf   : %s How are you?\n", text);
 	ft_printf("ft_printf: %s How are you?\n", text);
+	printf("printf   : %s %s How are you?\n", text, text);
+	ft_printf("ft_printf: %s %s How are you?\n", text, text);
+
+	ft_printf("\n::::: INTS ::::::\n");
+	printf("printf   : %d <-> %i Both d and i args\n", a, b);
+	ft_printf("ft_printf: %d <-> %i Both d and i args\n", a, b);
 }
