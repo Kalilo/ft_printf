@@ -16,7 +16,7 @@ void				ft_add_param(char type, void *param)
 		ft_put_hex((long unsigned int)param, 1);
 	else if (type == 'c')
 		ft_putchar((char)param);
-	else if (type == 'u')
+	else if (type == 'u' || type == 'D')
 		ft_put_uint((long unsigned int)param);
 	else if (type == '%')
 		ft_putchar('%');
