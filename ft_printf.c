@@ -18,8 +18,8 @@ void				ft_add_param(char type, void *param)
 		ft_putchar((char)param);
 	else if (type == 'u')
 		ft_put_uint((long unsigned int)param);
-	else if (type == 'f')
-		ft_put_float((float)param, 6);
+//	else if (type == 'f')
+//		ft_put_float((float)param, 6);
 }
 
 int					ft_printf(const char *str, ...)
