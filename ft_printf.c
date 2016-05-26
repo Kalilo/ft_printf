@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 07:54:06 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/25 15:23:06 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/05/26 08:14:18 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void				ft_add_param(char type, void *param)
 	else if (type == 'c')
 		ft_putchar((char)param);
 	else if (type == 'u')
-		ft_put_unum((long unsigned int)param);
+		ft_put_uint((long unsigned int)param);
 	else if (type == 'f')
 		ft_put_float((long double)param, 6);
 }
