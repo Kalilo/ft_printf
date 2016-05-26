@@ -7,7 +7,7 @@ void				ft_add_param(char type, void *param)
 	else if (type == 'i' || type == 'd')
 		ft_putnbr((int)param);
 	else if (type == 's')
-		ft_putstr((char *)param);
+		ft_putstr_l((char *)param);
 	else if (type == 'o')
 		ft_put_oct((long unsigned int)param);
 	else if (type == 'x')
@@ -18,6 +18,8 @@ void				ft_add_param(char type, void *param)
 		ft_putchar((char)param);
 	else if (type == 'u')
 		ft_put_uint((long unsigned int)param);
+	else if (type == '%')
+		ft_putchar('%');
 //	else if (type == 'f')
 //		ft_put_float((float)param, 6);
 }
