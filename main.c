@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 09:53:49 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 13:27:26 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int ft_printf(char *str, ...);
 int main(void)
 {
 	int a = 42, b = 21;
+	unsigned int u_a = 0x8000000, u_b = 0x80000;
 	char c = 'A';
 	char *text = "Hey Greg!";
 
@@ -44,6 +45,29 @@ int main(void)
 	ft_printf("ft_printf: %s %s How are you?\n", text, text);
 
 	ft_printf("\n::::: INTS ::::::\n");
-	printf("printf   : %d <-> %i Both d and i args\n", a, b);
-	ft_printf("ft_printf: %d <-> %i Both d and i args\n", a, b);
+	printf("printf   : %d <-> %i Both d & i args\n", a, b);
+	ft_printf("ft_printf: %d <-> %i Both d & i args\n", a, b);
+	printf("printf   : %d <-> %i Both d & i are neg args\n", -a, -b);
+	ft_printf("ft_printf: %d <-> %i Both d & i are neg args\n", -a, -b);
+	printf("printf   : %d <-> %i Both d & i 3 mil args\n", 3000000, 3000000);
+	ft_printf("ft_printf: %d <-> %i Both d & i 3 mil args\n", 3000000, 3000000);
+	printf("printf   : %d <-> %i Both d & i 3 mil neg args\n", -3000000, -3000000);
+	ft_printf("ft_printf: %d <-> %i Both d & i 3 mil neg args\n", -3000000, -3000000);
+
+	ft_printf("\n:::::  OCTALS  :::::\n");
+	printf("printf   : %o <-> %O Both o & O octal nums\n", a, b);
+	ft_printf("ft_printf: %o <-> %O Both o & O octal nums\n", a, b);
+	printf("printf   : %o <-> %O Both o & O octal nums (/w neg args)\n", -a, -b);
+	ft_printf("ft_printf: %o <-> %O Both o & O octal nums (/w neg args)\n", -a, -b);
+
+	ft_printf("\n:::::  HEX  :::::\n");
+	printf("printf   : %x <-> %X Both x & X hex nums\n", a, b);
+	ft_printf("ft_printf: %x <-> %X Both x & X hex nums\n", a, b);
+	printf("printf   : %x <-> %X Both x & X hex nums (/w neg args)\n", -a, -b);
+	ft_printf("ft_printf: %x <-> %X Both x & X hex nums (/w neg args)\n", -a, -b);
+
+	ft_printf("\n::::::  UNIT  ::::::\n");
+	printf("printf   : %u <-> %D Both u & D unsigned int nums\n", u_a, u_b);
+	ft_printf("ft_printf: %u <-> %D Both u & D unsigned int nums\n", u_a, u_b);
+
 }
