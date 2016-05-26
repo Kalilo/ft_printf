@@ -12,19 +12,25 @@
 
 #include "libft/libft.h"
 
-void	ft_put_hex(const long unsigned int num)
+void	ft_put_hex(const long unsigned int num, int upper)
 {
 	if (num >= 16)
 	{
 		ft_put_hex(num / 16);
 		if (num % 16 < 10)
 			ft_putchar(num % 16 + '0');
-		else
+		else if (upper)
 			ft_putchar(num % 16 - 10 + 'A');
+		else
+			ft_putchar(num % 16 - 10 + 'a');
 	}
 	else
+	{
 		if (num % 16 < 10)
 			ft_putchar(num + '0');
-		else
+		else if (upper)
 			ft_putchar(num - 10 + 'A');
+		else
+			ft_putchar(num - 10 + 'a');
+	}
 }
