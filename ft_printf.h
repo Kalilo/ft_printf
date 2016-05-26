@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 09:43:53 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 13:49:09 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void				ft_putstr_l(const char *s);
 void				ft_put_hex(long unsigned int num, int upper);
 void				ft_put_oct(long unsigned int num);
 void				ft_put_uint(unsigned int num);
-//void				ft_put_float(long double num, unsigned int dec);
+void				ft_put_float(long double num, unsigned int dec);
 
 #endif

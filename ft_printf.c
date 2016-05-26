@@ -1,9 +1,9 @@
 #include "ft_printf.h"
 
-void				ft_add_param(char type, void *param)
+void				ft_add_param(char type, double *param)
 {
 	if (type == 'S')
-		ft_putstr_l(param);
+		ft_putstr_l((char *)param);
 	else if (type == 'i' || type == 'd')
 		ft_putnbr((int)param);
 	else if (type == 's')
@@ -22,8 +22,8 @@ void				ft_add_param(char type, void *param)
 		ft_putchar('%');
 	else if (type == 'p')
 		ft_put_hex((unsigned int)param, 0);
-//	else if (type == 'f')
-//		ft_put_float((float)param, 6);
+	else if (type == 'f')
+		ft_put_float((double)*param, 6);
 }
 
 int					ft_printf(const char *str, ...)
@@ -39,7 +39,7 @@ int					ft_printf(const char *str, ...)
 		if (*fstr == '%')
 		{
 			fstr = ft_parse_args(&format, fstr, &arg_frmt);
-			ft_add_param(arg_frmt.type, va_arg(format, void *));
+			ft_add_param(arg_frmt.type, va_arg(format, double *));
 		}
 		else
 			ft_putchar(*fstr);
