@@ -8,7 +8,7 @@ void				ft_add_param(char type, void *param)
 		ft_putnbr((int)param);
 	else if (type == 's')
 		ft_putstr_l((char *)param);
-	else if (type == 'o')
+	else if (type == 'o' || type == 'O')
 		ft_put_oct((long unsigned int)param);
 	else if (type == 'x')
 		ft_put_hex((long unsigned int)param, 0);
