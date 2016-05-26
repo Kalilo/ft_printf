@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 08:20:25 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/26 08:24:55 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@
 
 typedef struct		s_frmt
 {
-	char	type;
-	char	flag;
-	int		width;
-	int		opt_plus_minus;
-	int		precision;
-	int		modifier;
+	char			type;
+	char			flag;
+	int				width;
+	int				opt_plus_minus;
+	int				precision;
+	int				modifier;
 }					t_frmt;
 
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
@@ -49,5 +49,6 @@ void				ft_putstr_l(const long int *str);
 void				ft_put_hex(long unsigned int num);
 void				ft_put_oct(long unsigned int num);
 void				ft_put_uint(unsigned int num);
+void				ft_put_float(long double num, unsigned int dec);
 
 #endif
