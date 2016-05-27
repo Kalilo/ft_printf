@@ -6,7 +6,7 @@ size_t				ft_add_param(char type, double *param)
 
 	len = 0;
 	if (type == 'S')
-		len += ft_putstr_l((char *)param);
+		len += ft_putwstr((wchar_t *)param);
 	else if (type == 'i' || type == 'd')
 		len += ft_putnbr((long long int)param);
 	else if (type == 's')
