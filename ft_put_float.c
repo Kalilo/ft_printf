@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 13:10:14 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 09:43:57 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 13:32:24 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void		ft_put_float(long double num, unsigned int dec)
 	}
 	ft_put_uint(ft_trunc(num));
 	if (dec > 0)
-		{
-			ft_putchar('-');
-			ft_put_dec(num, dec);
-		}
+	{
+		ft_putchar('-');
+		ft_put_dec(num, dec);
+	}
 }
