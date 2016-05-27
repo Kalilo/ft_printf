@@ -31,20 +31,14 @@ static void	ft_put_dec(long double num, unsigned int dec)
 void		ft_put_float(long double num, unsigned int dec)
 {
 	if (num < 0)
+	{
+		ft_putchar('-');
+		num = -num;
+	}
+	ft_put_unum(ft_trunc(num));
+	if (dec > 0)
 		{
 			ft_putchar('-');
-			ft_put_float(-num, dec);
+			ft_put_dec(num, dec);
 		}
-	else if (num >= 10)
-	{
-		ft_put_float(num / 10, dec);
-		ft_putchar(ft_trunc(num) % 10 + '0');
-	}
-	else if (1 > num && num > 0 && dec > 0)
-	{
-		ft_putchar('.');
-		ft_put_dec(num, dec);
-	}
-	else
-	ft_putchar(num + '0');
 }
