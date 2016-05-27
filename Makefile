@@ -9,7 +9,8 @@ SRC3 = Utils/ft_chrpos.c \
 	   Utils/ft_prschrs.c \
 	   Utils/ft_prsnbr.c \
 	   Utils/ft_prsstr.c \
-	   ft_parse_args.c
+	   ft_parse_args.c \
+	   Utils/ft_put_hash.c
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 	

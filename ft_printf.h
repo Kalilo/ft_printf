@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 06:37:53 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 12:03:34 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int					ft_prsnbr(char **str, int *nbr);
 int					ft_prsstr(char **str, char *cmp);
 int					ft_parse_wildchar(va_list *format, char **str, int *dst);
 char				*ft_parse_args PARAMS;
+size_t				ft_put_hash(char type, char flag);
 int					ft_printf(const char *str, ...);
 unsigned long int	ft_strlen_l(const long int *str);
 size_t				ft_putstr_l(const char *s);

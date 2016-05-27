@@ -1,10 +1,12 @@
 #include "ft_printf.h"
 
-size_t				ft_add_param(char type, double *param)
+size_t				ft_add_param(t_frmt *arg_frmt, double *param)
 {
 	size_t	len;
+	char 	type;
 
 	len = 0;
+	type = arg_frmt->type;
 	if (type == 'S')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'i' || type == 'd')
@@ -12,11 +14,15 @@ size_t				ft_add_param(char type, double *param)
 	else if (type == 's')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'o' || type == 'O')
+	{
+		len += ft_put_hash(type, arg_frmt->flag);	
 		len += ft_put_oct((long unsigned int)param);
-	else if (type == 'x')
-		len += ft_put_hex((long unsigned int)param, 0);
-	else if (type == 'X')
-		len += ft_put_hex((long unsigned int)param, 1);
+	}
+	else if (type == 'x' || type == 'X')
+	{
+		len += ft_put_hash(type, arg_frmt->flag);
+		len += ft_put_hex((long unsigned int)param, (type == 'X'));
+	}
 	else if (type == 'c')
 		len += ft_putchar((char)param);
 	else if (type == 'u' || type == 'D')
@@ -50,7 +56,7 @@ int					ft_printf(const char *str, ...)
 		if (*fstr == '%')
 		{
 			fstr = ft_parse_args(&format, fstr, &arg_frmt);
-			len += ft_add_param(arg_frmt.type, va_arg(format, double *));
+			len += ft_add_param(&arg_frmt, va_arg(format, double *));
 		}
 		else
 			len += ft_putchar(*fstr);

@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 06:33:46 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 10:07:09 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 13:15:28 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,16 @@ int	main(void)
 	ft_printf("\t\t\tLen: %d\n", ft_printf("ft_printf:Octals %o & %O", a, b));
 	printf("\tLen: %d\n", printf("printf   :Octals Neg %o & %O", -a, -b));
 	ft_printf("\tLen: %d\n", ft_printf("ft_printf:Octals Neg %o & %O", -a, -b));
+	printf("\t\t\tLen: %d\n", printf("printf   :Octals f:# %#o & %#O", a, b));
+	ft_printf("\t\t\tLen: %d\n", ft_printf("ft_printf:Octals f:# %#o & %#O", a, b));
 
 	ft_printf("\n::::: HEX (x & X)  :::::\n");
 	printf("\t\t\tLen: %d\n", printf("printf   :Hex %x & %X", a, b));
 	ft_printf("\t\t\tLen: %d\n", ft_printf("ft_printf:Hex %x & %X", a, b));
 	printf("\tLen: %d\n", printf("printf   :Hex Neg %x & %X", -a, -b));
 	ft_printf("\tLen: %d\n", ft_printf("ft_printf:Hex Neg %x & %X", -a, -b));
+	printf("\t\tLen: %d\n", printf("printf   :Hex f:# %#x & %#X", a, b));
+	ft_printf("\t\tLen: %d\n", ft_printf("ft_printf:Hex f:# %#x & %#X", a, b));
 
 	ft_printf("\n::::::  PTR (p)  ::::::\n");
 	int *a_ptr = &a;

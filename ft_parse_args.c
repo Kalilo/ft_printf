@@ -6,26 +6,17 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 13:52:33 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/26 09:26:25 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 12:43:16 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_frmtset(t_frmt *arg_frmt, char flag)
-{
-	t_frmt	*tmp;
-
-	tmp = (t_frmt *)malloc(sizeof(t_frmt));
-	tmp->flag = flag;
-	arg_frmt = tmp;
-}
-
 char	*ft_parse_args(va_list *format, char *str, t_frmt *arg_frmt)
 {
 	if (*str == '%')
 		str++;
-	ft_frmtset(arg_frmt, ft_prschrs(&str, "#0- +"));
+	arg_frmt->flag = ft_prschrs(&str, "#0- +");
 	ft_parse_wildchar(format, &str, &(arg_frmt->width));
 	if (arg_frmt->width < 0)
 	{
