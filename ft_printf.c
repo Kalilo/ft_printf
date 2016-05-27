@@ -8,7 +8,7 @@ size_t				ft_add_param(char type, double *param)
 	if (type == 'S')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'i' || type == 'd')
-		len += ft_putnbr((int)param);
+		len += ft_putnbr((long long int)param);
 	else if (type == 's')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'o' || type == 'O')
@@ -30,6 +30,8 @@ size_t				ft_add_param(char type, double *param)
 	}
 	else if (type == 'f')
 		ft_put_float((double)*param, 6);
+	else if (type == 'b')
+		ft_put_bin((long long int)param);
 	return (len);
 }
 
