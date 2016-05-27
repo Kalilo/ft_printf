@@ -1,16 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/05/09 09:29:00 by ghavenga          #+#    #+#              #
-#    Updated: 2016/05/27 08:10:43 by ghavenga         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-MAIN = main.c #REMOVE THIS LATER
+MAIN = main_v2.c #REMOVE THIS LATER
 NAME = ft_printf_test
 SRC = $(SRC1) $(SRC2) $(SRC3)
 SRC1 = ft_printf.c ft_printf.h ft_put_hex.c libft/libft.a libft/libft.h
