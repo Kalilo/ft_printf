@@ -12,7 +12,7 @@
 
 #include "libft/libft.h"
 
-size_t	ft_put_uint(const long unsigned int num)
+size_t	ft_put_uint(const long long unsigned int num)
 {
 	size_t	len;
 
