@@ -53,5 +53,6 @@ size_t				ft_put_hex(long unsigned int num, int upper);
 size_t				ft_put_oct(long unsigned int num);
 size_t				ft_put_uint(unsigned int num);
 void				ft_put_float(long double num, unsigned int dec);
+size_t				ft_put_bin(const long long unsigned int num);
 
 #endif
