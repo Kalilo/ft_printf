@@ -24,6 +24,8 @@
 # define MDF_J 2
 # define MDF_Z 3
 
+# define ft_put_unum ft_put_uint
+
 # define PARAMS (va_list *format, char *str, t_frmt *arg_frmt)
 
 typedef struct		s_frmt
