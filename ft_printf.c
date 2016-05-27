@@ -8,19 +8,34 @@ size_t				ft_add_param(char type, double *param)
 	if (type == 'S')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'i' || type == 'd')
+	{
+		len += ft_precision(arg_frmt.precision, (int)param);
 		len += ft_putnbr((int)param);
+	}
 	else if (type == 's')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'o' || type == 'O')
+	{
+		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_oct((long unsigned int)param);
+	}
 	else if (type == 'x')
+	{
+		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_hex((long unsigned int)param, 0);
+	}
 	else if (type == 'X')
+	{
+		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_hex((long unsigned int)param, 1);
+	}
 	else if (type == 'c')
 		len += ft_putchar((char)param);
 	else if (type == 'u' || type == 'D')
+	{
+		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_uint((long unsigned int)param);
+	}
 	else if (type == '%')
 		len += ft_putchar('%');
 	else if (type == 'p')
@@ -29,6 +44,7 @@ size_t				ft_add_param(char type, double *param)
 		len += ft_put_hex((unsigned int)param, 0);
 	}
 	else if (type == 'f')
+		ft_precision(arg_frmt.precision, (int)param);
 		ft_put_float((double)*param, 6);
 	return (len);
 }
