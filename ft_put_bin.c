@@ -6,9 +6,11 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 09:24:09 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 09:24:56 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/27 09:46:29 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 size_t	ft_put_bin(const long long unsigned int num)
 {
