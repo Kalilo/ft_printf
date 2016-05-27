@@ -8,7 +8,7 @@ size_t				ft_add_param(t_frmt *arg_frmt, double *param)
 	len = 0;
 	type = arg_frmt->type;
 	if (type == 'S')
-		len += ft_putstr_l((char *)param);
+		len += ft_putwstr((wchar_t *)param);
 	else if (type == 'i' || type == 'd')
 		len += ft_putnbr((long long int)param);
 	else if (type == 's')

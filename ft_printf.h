@@ -55,5 +55,8 @@ size_t				ft_put_oct(long unsigned int num);
 size_t				ft_put_uint(unsigned int num);
 void				ft_put_float(long double num, unsigned int dec);
 size_t				ft_put_bin(const long long unsigned int num);
+int					ft_wchar_len(wchar_t *ws);
+size_t				ft_putwstr(wchar_t *str);
+size_t				ft_putwchar(int c);
 
 #endif
