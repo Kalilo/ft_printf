@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		w_char_len(wchar_t *ws)
+int		ft_wchar_len(wchar_t *ws)
 {
 	wchar_t		c;
 
