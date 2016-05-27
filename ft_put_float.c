@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
+#include "printf.h"
 
 static int	ft_trunc(long int num)
 {
