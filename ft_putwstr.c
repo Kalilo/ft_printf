@@ -29,7 +29,7 @@ size_t	ft_putwstr(wchar_t *str)
 				l =+ str[m];
 				m++;
 			}
-			count =+ putchar(l); 
+			count =+ ft_putwchar(l); 
 			str = str + k;
 		}
 }
