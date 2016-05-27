@@ -6,7 +6,7 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 06:33:46 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 08:06:31 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 10:07:09 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,9 @@ int	main(void)
 	printf("\t\tLen: %d\n", printf("printf   : %p", a_ptr));
 	ft_printf("\t\tLen: %d\n", ft_printf("ft_printf: %p", a_ptr));
 
+	//ft_printf("\n::::: FLOAT (f) ::::::\n");
+	//printf("\t\t\tLen: %d\n", printf("printf   : %f", 2.54567));
+	//ft_printf("\t\t\tLen: %d\n", ft_printf("ft_printf: %f", 2.54567));
 
 	ft_printf("\n::::: UNIT (u & D) :::::\n");
 	printf("\t\t\n\t\tLen: %d\n", printf("printf   : uint %u & %D", u_a, u_b));
