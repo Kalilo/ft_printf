@@ -12,9 +12,9 @@
 
 #include "libft/libft.h"
 
-size_t	ft_put_hex(const long unsigned int num, int upper)
+size_t	ft_put_hex(const long long unsigned int num, int upper)
 {
-	size_t	len;
+	long long unsigned int	len;
 
 	len = 0;
 	if (num >= 16)
