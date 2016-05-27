@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 12:03:34 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/27 13:46:08 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "libft/libft.h"
 # include <stdarg.h>
 # include <stdlib.h>
+# include <wchar.h>
+# include <unistd.h>
 
 # define MDF_HH 11
 # define MDF_LL 12

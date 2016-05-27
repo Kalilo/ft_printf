@@ -6,17 +6,21 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 09:39:30 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 10:09:01 by khansman         ###   ########.fr       */
+/*   Updated: 2016/05/27 13:50:32 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
 int		ft_wchar_len(wchar_t *ws)
 {
 	wchar_t		c;
+	wint_t		i;
 
-	c = (wchar_t)((wint_t)ws);
+	i = 0;
+	i = (wint_t)ws;
+	c = (wchar_t)i;
+	//c = (wchar_t)((wint_t)*ws);
 	if (c < 128)
 		return (1);
 	if (c < 2048)
