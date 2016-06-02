@@ -1,21 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/06/02 14:47:20 by ghavenga          #+#    #+#             */
+/*   Updated: 2016/06/02 15:01:39 by ghavenga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-size_t				ft_add_param(t_frmt *arg_frmt, double *param)
+static size_t		ft_paramone(t_frmt *arg_frmt, double *param, size_t len)
 {
-	size_t	len;
-	char 	type;
+	char			type;
 
-	len = 0;
 	type = arg_frmt->type;
 	if (type == 'S')
-		return (len);
+		len += ft_putstr_l((char *)param);
 	else if (type == 'i' || type == 'd')
 		len += ft_putnbr((long long int)param);
 	else if (type == 's')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'o' || type == 'O')
 	{
-		len += ft_put_hash(type, arg_frmt->flag);	
+		len += ft_put_hash(type, arg_frmt->flag);
 		len += ft_put_oct((long unsigned int)param);
 	}
 	else if (type == 'x' || type == 'X')
@@ -23,7 +33,15 @@ size_t				ft_add_param(t_frmt *arg_frmt, double *param)
 		len += ft_put_hash(type, arg_frmt->flag);
 		len += ft_put_hex((long unsigned int)param, (type == 'X'));
 	}
-	else if (type == 'c')
+	return (len);
+}
+
+static size_t		ft_paramtwo(t_frmt *arg_frmt, double *param, size_t len)
+{
+	char			type;
+
+	type = arg_frmt->type;
+	if (type == 'c')
 		len += ft_putchar((char)param);
 	else if (type == 'u' || type == 'D')
 	{
@@ -39,6 +57,24 @@ size_t				ft_add_param(t_frmt *arg_frmt, double *param)
 	}
 	else if (type == 'b')
 		ft_put_bin((long long int)param);
+	return (len);
+}
+
+size_t				ft_add_param(t_frmt *arg_frmt, double *param)
+{
+	char			type;
+	size_t			len;
+
+	len = 0;
+	type = arg_frmt->type;
+	if (type == 'c' || type == 'u' || type == 'D')
+		len = ft_paramtwo(arg_frmt, param, len);
+	else if (type == '%' || type == 'p' || type == 'b')
+		len = ft_paramtwo(arg_frmt, param, len);
+	else if (type == 'S' || type == 'i' || type == 'd' || type == 'x')
+		len = ft_paramone(arg_frmt, param, len);
+	else if (type == 'O' || type == 'o' || type == 's' || type == 'X')
+		len = ft_paramone(arg_frmt, param, len);
 	return (len);
 }
 
