@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_wchar_len.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/27 09:39:30 by khansman          #+#    #+#             */
+/*   Updated: 2016/06/02 08:40:03 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft/libft.h"
 
-char	ft_prschrs(char **str, char *chrs)
+int		ft_wchar_len(wchar_t *ws)
 {
-	char	c;
-	int		n;
+	wchar_t		c;
+	wint_t		i;
 
-	n = 0;
-	if (chrs && (c = **str))
-	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
-	}
+	i = 0;
+	i = (wint_t)ws;
+	c = (wchar_t)i;
+	if (c < 128)
+		return (1);
+	if (c < 2048)
+		return (2);
+	if (c < 65536)
+		return (3);
+	if (c < 1114112)
+		return (4);
 	return (0);
 }

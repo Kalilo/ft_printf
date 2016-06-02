@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 07:42:20 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/26 16:06:05 by oexall           ###   ########.fr       */
+/*   Updated: 2016/05/30 12:38:38 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int main(void)
 	//ft_printf("ft_printf: %f Float num\n", 45.55);
 
 	ft_printf("\n:::::  PTR   :::::\n");
-	int *a_ptr = &a;
+	char *a_ptr = &text;
 	printf("printf   : %p Pointer Mem Addr\n", a_ptr);
 	ft_printf("ft_printf: %p Pointer Mem Addr\n", a_ptr);
 }

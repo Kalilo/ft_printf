@@ -1,21 +1,28 @@
 #include "ft_printf.h"
 
-size_t				ft_add_param(char type, double *param)
+size_t				ft_add_param(t_frmt *arg_frmt, double *param)
 {
 	size_t	len;
+	char 	type;
 
 	len = 0;
+	type = arg_frmt->type;
 	if (type == 'S')
-		len += ft_putstr_l((char *)param);
+		len += ft_putwstr((wchar_t *)param);
 	else if (type == 'i' || type == 'd')
+<<<<<<< HEAD
 	{
 		len += ft_precision(arg_frmt.precision, (int)param);
 		len += ft_putnbr((int)param);
 	}
+=======
+		len += ft_putnbr((long long int)param);
+>>>>>>> 0ceee17fbf88de2cc6e8ec91975e7b292bf738d3
 	else if (type == 's')
 		len += ft_putstr_l((char *)param);
 	else if (type == 'o' || type == 'O')
 	{
+<<<<<<< HEAD
 		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_oct((long unsigned int)param);
 	}
@@ -28,6 +35,15 @@ size_t				ft_add_param(char type, double *param)
 	{
 		ft_precision(arg_frmt.precision, (int)param);
 		len += ft_put_hex((long unsigned int)param, 1);
+=======
+		len += ft_put_hash(type, arg_frmt->flag);	
+		len += ft_put_oct((long unsigned int)param);
+	}
+	else if (type == 'x' || type == 'X')
+	{
+		len += ft_put_hash(type, arg_frmt->flag);
+		len += ft_put_hex((long unsigned int)param, (type == 'X'));
+>>>>>>> 0ceee17fbf88de2cc6e8ec91975e7b292bf738d3
 	}
 	else if (type == 'c')
 		len += ft_putchar((char)param);
@@ -46,6 +62,8 @@ size_t				ft_add_param(char type, double *param)
 	else if (type == 'f')
 		ft_precision(arg_frmt.precision, (int)param);
 		ft_put_float((double)*param, 6);
+	else if (type == 'b')
+		ft_put_bin((long long int)param);
 	return (len);
 }
 
@@ -64,7 +82,7 @@ int					ft_printf(const char *str, ...)
 		if (*fstr == '%')
 		{
 			fstr = ft_parse_args(&format, fstr, &arg_frmt);
-			len += ft_add_param(arg_frmt.type, va_arg(format, double *));
+			len += ft_add_param(&arg_frmt, va_arg(format, double *));
 		}
 		else
 			len += ft_putchar(*fstr);

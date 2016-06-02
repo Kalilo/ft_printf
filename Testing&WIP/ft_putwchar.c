@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_putwchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/27 11:33:33 by khansman          #+#    #+#             */
+/*   Updated: 2016/05/27 11:35:32 by khansman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "printf.h"
 
-char	ft_prschrs(char **str, char *chrs)
+size_t		ft_putwchar(int c)
 {
-	char	c;
-	int		n;
-
-	n = 0;
-	if (chrs && (c = **str))
-	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
-	}
+	if (write(1, &c, 1))
+		return (1);
 	return (0);
 }

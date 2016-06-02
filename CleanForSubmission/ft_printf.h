@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/05/27 13:46:08 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/02 09:05:15 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,7 @@ size_t				ft_putstr_l(const char *s);
 size_t				ft_put_hex(long unsigned int num, int upper);
 size_t				ft_put_oct(long unsigned int num);
 size_t				ft_put_uint(unsigned int num);
-void				ft_put_float(long double num, unsigned int dec);
 size_t				ft_put_bin(const long long unsigned int num);
-int					ft_wchar_len(wchar_t *ws);
-size_t				ft_putwstr(wchar_t *str);
-size_t				ft_putwchar(int c);
+void				ft_precision(size_t prec, size_t arg);
 
 #endif

@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_chrpos.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/25 15:08:37 by oexall            #+#    #+#             */
+/*   Updated: 2016/05/25 15:46:14 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	ft_prschrs(char **str, char *chrs)
+int		ft_chrpos(char c, char *str)
 {
-	char	c;
-	int		n;
+	int	n;
 
 	n = 0;
-	if (chrs && (c = **str))
+	while (str[n] != '\0')
 	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
+		if (str[n] == c)
+			return (n);
+		n++;
 	}
-	return (0);
+	return (-1);
 }

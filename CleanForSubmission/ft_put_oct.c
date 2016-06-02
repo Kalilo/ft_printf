@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_put_oct.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/25 09:17:44 by khansman          #+#    #+#             */
+/*   Updated: 2016/05/26 15:44:48 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "libft/libft.h"
 
-char	ft_prschrs(char **str, char *chrs)
+size_t	ft_put_oct(const long unsigned int n)
 {
-	char	c;
-	int		n;
+	size_t	len;
 
-	n = 0;
-	if (chrs && (c = **str))
+	len = 0;
+	if (n >= 8)
 	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
+		len += ft_put_oct(n / 8);
+		len += ft_putchar(n % 8 + '0');
 	}
-	return (0);
+	else
+		len += ft_putchar(n + '0');
+	return (len);
 }

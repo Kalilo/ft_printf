@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/27 09:32:02 by ghavenga          #+#    #+#             */
+/*   Updated: 2016/06/02 09:04:48 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-char	ft_prschrs(char **str, char *chrs)
+void	ft_precision(size_t prec, size_t arg)
 {
-	char	c;
-	int		n;
+	size_t	k;
 
-	n = 0;
-	if (chrs && (c = **str))
+	k = 0;
+	if (prec > ft_strlen(ft_itoa(arg)))
 	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
+		while (k < prec + ft_strlen(ft_itoa(arg)))
+			ft_putchar('0');
 	}
-	return (0);
 }

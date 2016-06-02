@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_put_bin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/27 09:24:09 by khansman          #+#    #+#             */
+/*   Updated: 2016/05/27 09:46:29 by oexall           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-char	ft_prschrs(char **str, char *chrs)
+size_t	ft_put_bin(const long long unsigned int num)
 {
-	char	c;
-	int		n;
+	size_t	len;
 
-	n = 0;
-	if (chrs && (c = **str))
+	len = 0;
+	if (num >= 2)
 	{
-		while (chrs[n] != '\0')
-		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
-		}
+		len += ft_put_uint(num / 2);
+		len += ft_putchar(num % 2 + '0');
 	}
-	return (0);
+	else
+		len += ft_putchar(num + '0');
+	return (len);
 }
