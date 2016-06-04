@@ -39,5 +39,9 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "Removed '.a' file"
+	
+norm:
+	@clear
+	@norminette $(SRC)
 
 re: clean all
