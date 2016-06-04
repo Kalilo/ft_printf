@@ -24,15 +24,20 @@ CFLAGS = -Wall -Werror -Wextra
 all: $(NAME) lib
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SRC) $(LIBHEADER) $(HEADER)
+	@$(CC) $(CFLAGS) $(SRC) $(LIBHEADER) $(HEADER)
+	@echo "Compiled Objects"
 
 lib: $(NAME)
-	ar rc $(NAME) $(OBJ) $(LIBHEADER) $(HEADER)
+	@ar rc $(NAME) $(OBJ) $(LIBHEADER) $(HEADER)
+	@echo "Compiled '.a' file"
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
+	@rm -Rf $(HEADER:.h=.h.gch) $(LIBHEADER:.h=.h.gch)
+	@echo "Removed Objects"
 
 fclean: clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
+		@echo "Removed '.a' file"
 
 re: clean all
