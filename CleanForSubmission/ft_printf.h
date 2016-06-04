@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 10:26:04 by khansman          #+#    #+#             */
-/*   Updated: 2016/06/02 09:05:15 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/04 07:23:24 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ size_t				ft_put_hex(long unsigned int num, int upper);
 size_t				ft_put_oct(long unsigned int num);
 size_t				ft_put_uint(unsigned int num);
 size_t				ft_put_bin(const long long unsigned int num);
-void				ft_precision(size_t prec, size_t arg);
+void				ft_precision(size_t prec, int arg);
 
 #endif

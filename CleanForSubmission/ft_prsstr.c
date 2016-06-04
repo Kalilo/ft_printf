@@ -6,11 +6,11 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 15:00:04 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/25 15:45:24 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/04 07:19:02 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_prsstr(char **str, char *cmp)
 {

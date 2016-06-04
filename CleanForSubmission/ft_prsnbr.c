@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prschrs.c                                       :+:      :+:    :+:   */
+/*   ft_prsnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 14:25:42 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 11:42:55 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/25 14:39:31 by oexall            #+#    #+#             */
+/*   Updated: 2016/06/04 07:18:45 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-char	ft_prschrs(char **str, char *chrs)
+int	ft_prsnbr(char **str, int *nbr)
 {
-	char	c;
-	int		n;
+	int		i;
+	int		lnbr;
+	int		sign;
+	char	*tmp;
 
-	n = 0;
-	if (chrs && (c = **str))
+	i = 0;
+	lnbr = 0;
+	sign = 1;
+	if (str && (tmp = *str))
 	{
-		while (chrs[n] != '\0')
+		if (*tmp == '-' || *tmp == '+')
 		{
-			if (c == chrs[n])
-			{
-				(*str)++;
-				return (chrs[n]);
-			}
-			n++;
+			sign = (*tmp == '-') ? -1 : 1;
+			tmp++;
 		}
+		while (tmp[i] >= '0' && tmp[i] <= '9')
+		{
+			lnbr = lnbr * 10 + (tmp[i] - '0');
+			i++;
+		}
+		*nbr = (lnbr * sign);
+		*str = &tmp[i];
+		return (i > 0);
 	}
 	return (0);
 }

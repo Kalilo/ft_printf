@@ -6,11 +6,11 @@
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 11:01:51 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/27 13:39:18 by oexall           ###   ########.fr       */
+/*   Updated: 2016/06/04 07:19:19 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 size_t	ft_put_hash(char type, char flag)
 {

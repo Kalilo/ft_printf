@@ -1,3 +1,0 @@
-update libft ft_putstr to use ptr arithmetic -- DONE
-
-put headers back before push -- IMPORTANT

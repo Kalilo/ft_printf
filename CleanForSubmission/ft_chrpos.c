@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_prsstr.c                                        :+:      :+:    :+:   */
+/*   ft_chrpos.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oexall <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/25 15:00:04 by oexall            #+#    #+#             */
-/*   Updated: 2016/05/25 15:45:24 by oexall           ###   ########.fr       */
+/*   Created: 2016/05/25 15:08:37 by oexall            #+#    #+#             */
+/*   Updated: 2016/06/04 07:31:26 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-int	ft_prsstr(char **str, char *cmp)
+int		ft_chrpos(char c, char *str)
 {
-	int		n;
-	char	*tmp;
+	int	n;
 
 	n = 0;
-	if (cmp && (tmp = *str))
+	while (str[n] != '\0')
 	{
-		while (tmp[n] != '\0' && cmp[n] != '\0')
-		{
-			if (tmp[n] != cmp[n])
-				return (tmp[n] - cmp[n]);
-			n++;
-		}
-		*str = &tmp[n];
+		if (str[n] == c)
+			return (n);
+		n++;
 	}
-	return (0);
+	return (-1);
 }

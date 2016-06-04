@@ -6,13 +6,13 @@
 /*   By: ghavenga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/27 09:32:02 by ghavenga          #+#    #+#             */
-/*   Updated: 2016/06/02 09:04:48 by ghavenga         ###   ########.fr       */
+/*   Updated: 2016/06/04 07:10:31 by ghavenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_precision(size_t prec, size_t arg)
+void		ft_precision(size_t prec, int arg)
 {
 	size_t	k;
 
