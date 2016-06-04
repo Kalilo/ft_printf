@@ -37,7 +37,7 @@ clean:
 	@echo "Removed Objects"
 
 fclean: clean
-		@rm -f $(NAME)
-		@echo "Removed '.a' file"
+	@rm -f $(NAME)
+	@echo "Removed '.a' file"
 
 re: clean all
