@@ -40,7 +40,7 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Removed '.a' file"
 	
-norm:
+norme:
 	@clear
 	@norminette $(SRC)
 
